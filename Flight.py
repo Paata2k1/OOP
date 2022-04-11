@@ -1,6 +1,6 @@
 import random
 import string
-
+import names
 
 class Flight:
 
@@ -15,6 +15,11 @@ class Flight:
     def generate_id(self):
         id = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
         return id
+
+    def list_passengers(self):
+        for i in range(4):
+            passengers = names.get_first_name()
+            print(passengers)
 
     def display_info(self):
         print("Flight ID:" + self.generate_id(), "\nsource:" + self.source, "\nDestination:" + self.destination,

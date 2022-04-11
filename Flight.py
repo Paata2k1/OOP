@@ -28,6 +28,13 @@ class Flight:
         else:
             print("True")
 
+    def add_passenger(passengers):
+        if len(passengers) >= 8:
+            print("No seats available")
+        else:
+            passengers.append('liv')
+            print(passengers)
+
     def list_passengers(self):
         for i in range(4):
             passengers = names.get_first_name()

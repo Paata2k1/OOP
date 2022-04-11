@@ -15,3 +15,7 @@ class Flight:
     def generate_id(self):
         id = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
         return id
+
+    def display_info(self):
+        print("Flight ID:" + self.generate_id(), "\nsource:" + self.source, "\nDestination:" + self.destination,
+              "\nDuration:" + str(self.duration), "\nSeats:" + str(self.seats))

@@ -1,9 +1,6 @@
 import random
 import string
 
-#x = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
-#print(x)
-
 
 class Flight:
 
@@ -15,4 +12,6 @@ class Flight:
         self.seats = seats
         self.passengers = passengers
 
-print(x)
+    def generate_id(self):
+        id = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
+        return id

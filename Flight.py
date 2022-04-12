@@ -9,7 +9,7 @@ for i in range(5):
 
 class Flight:
 
-    def __init__(self, id, source, destination, duration, seats, passengers):
+    def __init__(self, source, destination, duration, seats, ):
         self.id = id
         self.source = source
         self.destination = destination
@@ -22,16 +22,13 @@ class Flight:
         return id
 
     def open_seats(self):
-        if len(passengers) >= 8:
-            print("false")
-        else:
-            print("True")
+        print(self.seats > len(passengers))
 
-    def add_passenger(passengers):
-        if len(passengers) >= 8:
+    def add_passenger(self):
+        if len(passengers) >= self.seats:
             print("No seats available")
         else:
-            passengers.append('liv')
+            passengers.append('Liv')
             print(passengers)
 
     def list_passengers(self):

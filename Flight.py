@@ -7,9 +7,10 @@ for i in range(5):
     passengers = names.get_first_name()
 
 
-class Flight:
+class Flight(object):
 
-    def __init__(self, source, destination, duration, seats, ):
+    def __init__(self, source, destination, duration, seats):
+
         self.id = id
         self.source = source
         self.destination = destination
@@ -17,8 +18,10 @@ class Flight:
         self.seats = seats
         self.passengers = passengers
 
+    @property
     def generate_id(self):
         id = ''.join(random.choice(string.ascii_uppercase) for _ in range(5))
+
         return id
 
     def open_seats(self):
@@ -37,24 +40,5 @@ class Flight:
             print(passengers)
 
     def display_info(self):
-        print("Flight ID:" + self.generate_id(), "\nsource:" + self.source, "\nDestination:" + self.destination,
+        print("Flight ID:" + self.generate_id, "\nsource:" + self.source, "\nDestination:" + self.destination,
               "\nDuration:" + str(self.duration), "\nSeats:" + str(self.seats))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

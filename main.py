@@ -15,6 +15,9 @@ Flight2.display_info()
 print("==================")
 
 Flight2.list_passengers()
+print("==================")
 
+print(Flight1.generate_id)
 
+print(Flight2.generate_id)
 
